@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Include the MAVROS node with SITL and Gazebo -->
+	<include file="$(find px4)/launch/multi_uav_mavros_sitl.launch">
+        </include>
+     
+	<!-- Our node to control the drone -->
+	<node pkg="offboard_py" type="test222.py" name="move_front" output="screen" required="true">
+	</node>
+</launch>
